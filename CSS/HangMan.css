@@ -3,20 +3,61 @@ body {
   text-align: center;
   height: 100%;
   font-size: 18px;
-
+  
 }
 
-.background {
+/*.background {
   background-image: url("../Images/background.png");
-  background-size: 75%;
-  background-position: center center;
-  position: relative;
+  background-size: 850px auto;
+  background-repeat: no-repeat;
+  background-position: center;
   top: 10;
   bottom: 10;
-  height: 100vh;
-  z-index: -10;
-}
+  height: 80vh;
+  z-index: -10;*/
+
+
 
 .wrapper h1, h2 {
   font-family:'Orbitron', sans-serif;
+}
+
+#piccol {
+  margin: 10px;
+  font-family:'Orbitron', sans-serif;
+  min-height: 500px;
+  padding: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: white;
+  text-shadow: 1px 1px ;
+  border: 3px solid;
+  /*opacity: 0.5;*/
+}
+
+#maincol {
+  margin: 10px;
+  font-family:'Orbitron', sans-serif;
+  min-height: 500px;
+  padding: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: white;
+  text-shadow: 1px 1px ;
+  border: 3px solid; 
+  opacity: 0.5;
+}
+
+.opac {
+  /*opacity: 0.7;*/
+  background: rgba(0, 0, 0, 0.4);
+  background-image: url("../Images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#dark {
+  background: rgba(0, 0, 0, 1);
+  background-color: white;
+  color:black;
 }
