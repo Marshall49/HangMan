@@ -4,8 +4,6 @@
   <title>HangMan</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="CSS/HangMan.css">
 <link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet">
@@ -31,11 +29,90 @@
       <div class="col-md-4">
         <div id="maincol">
           <p>Press Any Key To Get Started</p>
+          <br>
           <p>Wins</p>
+          <div id="wins"></div>
+          <br>
+          <p>Current Word</p>
+          <div id="currentWord">
+          </div>
+          <br>
+          <p>Guesses Remaining</p>
+          <div id="guessesRemaining">
+          </div>
+          <br>
+          <p>Letters Already Guessed</p>
+          <div id="alreadyGuessed"></div>
+
         </div>
       </div>
     </div>
-   
+
+    <script>
+
+        var numberOfGuesses = 5;
+        var wins = 0; 
+        var alreadyGuessed = [];
+        var dots = "";
+        var teams = ["Cavaliers", "Falcons", "Hawks", "Crimson Tide", "Cubs", "Yellow Jackets", "The Herd", "Tarheels", "Tigers"];
+        var random = teams[Math.floor(Math.random() * teams.length)];
+        document.querySelector("#wins").innerHTML = wins;
+
+        dots = Array(random.length).join("_");
+        document.querySelector("#currentWord").innerHTML = dots;
+        //Assigned the current word section with underscore value
+
+        document.querySelector("#guessesRemaining").innerHTML = numberOfGuesses;
+
+        document.onkeyup = function(event) {
+          var userKey = event.key;
+          //if user key was found, 
+          if (random.indexOf(userKey) >= 0) {
+
+
+
+
+
+
+
+
+
+
+
+        }
+        }
+        // var team{
+        //   this.name  = "name",
+        //   this.nameLength = nameLength
+
+        // }
+
+        // var Cavaliers = new team("Cavaliers", 9)
+
+        // if(wrong < 5){
+        //   for(var i = 0, i < this.name.length, i++){
+        //     if(this.name.length[i] === userInput){
+        //       document.write(userInput);
+        //       guesses ++;
+        //     }else if(userInput !== this.name.length[i]){
+        //       guesses ++;
+        //       wrong ++;
+
+        //    }
+        //   }
+        // }
+
+        // var currentWord = ["Cavaliers", "Falcons", "Hawks"]
+        // var wordLength = currentWord.length;
+
+        // for(var i = 0, i < currentWord.length, i++){
+        //   if(currentWord[i] === userInput){
+        //     document.write(userInput);
+        //     guesses ++;
+        //   }
+        
+        </script>
+           
      
 
 </body>
