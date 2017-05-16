@@ -53,21 +53,122 @@
         var numberOfGuesses = 10;
         var wins = 0; 
         var alreadyGuessed = [];
-        var dots = "";
+        var dots = "_";
         var teams = ["Cavaliers", "Falcons", "Hawks", "Crimson Tide", "Cubs", "Yellow Jackets", "The Herd", "Tarheels", "Tigers"];
         var random = teams[Math.floor(Math.random() * teams.length)];
         document.querySelector("#wins").innerHTML = wins;
-
         dots = Array(random.length).join("_");
         document.querySelector("#currentWord").innerHTML = dots;
         //Assigned the current word section with underscore value
-
         document.querySelector("#guessesRemaining").innerHTML = numberOfGuesses;
-
         document.onkeyup = function(event) {
           var userKey = event.key;
-          //if user key was found, 
-          if (random.indexOf(userKey) >= 0) {
+          var keyPressed = [];
+            keyPressed.push(userKey);
+            // console.log(userKey);
+            console.log(keyPressed);
+            console.log(random);
+        
+          // if user key was found, 
+          if (random.indexOf(userKey) >= 0){
+            for (var i = 0; i < random.length; i++){
+              alreadyGuessed[i] = "_";
+            }
+
+            numberOfGuesses = alreadyGuessed.join("_");
+            document.getElementById("currentWord").innerHTML = numberOfGuesses;
+
+        }
+          function guess () {
+            alreadyGuessed = document.getElementById("alreadyGuessed").value;
+
+          if (alreadyGuessed.length > 0) {
+              for (var i = 0; i < random.length; i++) {
+                if (random[i] === guess) {
+                  alreadyGuessed[i] = guess;
+                }
+              }
+            }
+          }
+        }
+
+
+
+
+
+
+
+
+          // function startUp() {
+          //   for (var i = 0; i < random.length; i++){
+          //     alreadyGuessed [i] = "_";
+          //   }
+          // }
+          
+
+          // function findKey(userKey){
+
+          // }
+
+          // findKey();
+         
+         
+
+
+
+
+
+
+        // var teamTypeArr = ["Cavaliers", "Falcons", "Hawks", "Crimson Tide", "Cubs", "Yellow Jackets", "The Herd", "Tarheels", "Tigers"]
+        // var teamType = teamTypeArr[Math.floor(Math.random() * teamTypeArr.length)];
+
+
+        // var t;
+        // var count = 0;
+        // var wins = [];
+
+        
+        // document.onkeyup = function startUp(){
+        //   for (var i = 0; i < teamType.length; i++) {
+        //     wins[i] = "_";
+        //   }
+        
+        //   t = wins.join("_");
+        //   document.getElementById("currentWord").innerHTML = t;
+        // }
+
+        // function guess() {
+        //   var guess = document.getElementById("guessesRemaining").value;
+
+        //   if (guess.length > 0) {
+        //     for (var i = 0; i < teamType.length; i ++) {
+        //       if (teamType[i] === guess) {
+        //         wins[i] = guess;
+        //       }
+            
+        //     count++;
+        //     document.getElementById("alreadyGuessed").innerHTML = "No of clicks: " + count;
+        //     document.getElementById("currentWord").innerHTML = wins.join("");
+        //   }
+            // if(count>5) {
+            //   document.getElementById("")
+            
+        
+
+
+
+
+
+
+
+
+
+        
+
+        
+          // var userKey = event.key;
+        //   //if user key was found, 
+        //   if (random.indexOf(userKey) >= 0) {
 
              // if(wrong < 5){
         //   for(var i = 0, i < this.name.length, i++){
@@ -89,8 +190,8 @@
 
 
 
-        }
-        }
+        // }
+        // }
         // var team{
         //   this.name  = "name",
         //   this.nameLength = nameLength
@@ -122,8 +223,6 @@
         //   }
         
         </script>
-           
-     
 
 </body>
 </html>

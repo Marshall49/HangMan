@@ -1,0 +1,74 @@
+<script>
+
+        var numberOfGuesses = 10;
+        var wins = 0; 
+        var alreadyGuessed = [];
+        var dots = "";
+        var teams = ["Cavaliers", "Falcons", "Hawks", "Crimson Tide", "Cubs", "Yellow Jackets", "The Herd", "Tarheels", "Tigers"];
+        var random = teams[Math.floor(Math.random() * teams.length)];
+        document.querySelector("#wins").innerHTML = wins;
+
+        dots = Array(random.length).join("_");
+        document.querySelector("#currentWord").innerHTML = dots;
+        //Assigned the current word section with underscore value
+
+        document.querySelector("#guessesRemaining").innerHTML = numberOfGuesses;
+
+        // document.onkeyup = function(event) {
+        //   var userKey = event.key;
+        //   //if user key was found, 
+        //   if (random.indexOf(userKey) >= 0) {
+
+             // if(wrong < 5){
+        //   for(var i = 0, i < this.name.length, i++){
+        //     if(this.name.length[i] === userInput){
+        //       document.write(userInput);
+        //       guesses ++;
+        //     }else if(userInput !== this.name.length[i]){
+        //       guesses ++;
+        //       wrong ++;
+
+        //    }
+        //   }
+
+
+
+
+
+
+
+
+
+        // }
+        // }
+        // var team{
+        //   this.name  = "name",
+        //   this.nameLength = nameLength
+
+        // }
+
+        // var Cavaliers = new team("Cavaliers", 9)
+
+        // if(wrong < 5){
+        //   for(var i = 0, i < this.name.length, i++){
+        //     if(this.name.length[i] === userInput){
+        //       document.write(userInput);
+        //       guesses ++;
+        //     }else if(userInput !== this.name.length[i]){
+        //       guesses ++;
+        //       wrong ++;
+
+        //    }
+        //   }
+        // }
+
+        // var currentWord = ["Cavaliers", "Falcons", "Hawks"]
+        // var wordLength = currentWord.length;
+
+        // for(var i = 0, i < currentWord.length, i++){
+        //   if(currentWord[i] === userInput){
+        //     document.write(userInput);
+        //     guesses ++;
+        //   }
+        
+        </script>
